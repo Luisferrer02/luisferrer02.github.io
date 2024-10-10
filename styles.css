@@ -96,17 +96,39 @@ textarea {
         opacity: 0;
     }
 }
-
 .heart {
     width: 20px;
     height: 20px;
     position: absolute;
     background-color: #ff69b4;
-    transform: rotate(45deg);
+    transform: rotate(45deg); /* Rotación inicial */
     animation: float 5s infinite ease-in-out;
     overflow: hidden;
 }
 
+/* Estilos para el antes y el después del corazón */
+.heart::before,
+.heart::after {
+    content: "";
+    width: 20px; /* Mismo tamaño que el corazón */
+    height: 20px; /* Mismo tamaño que el corazón */
+    border-radius: 50%; /* Redondeo para las formas circulares */
+    background-color: #ff69b4; /* Mismo color que el corazón */
+    position: absolute;
+}
+
+/* Posicionamiento del corazón */
+.heart::before {
+    top: -10px; /* Ajuste para que se superponga en la parte superior */
+    left: 0; /* Centrado en la parte superior */
+}
+
+.heart::after {
+    left: 10px; /* Ajuste para que se superponga a la derecha */
+    top: 0; /* Centrado en la parte lateral */
+}
+
+/* Animaciones y posicionamiento para cada corazón */
 .heart:nth-child(1) {
     left: 10%;
     animation-duration: 5s;
@@ -137,26 +159,6 @@ textarea {
     animation-duration: 5s;
 }
 
-.heart::before,
-.heart::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ff69b4;
-    position: absolute;
-}
-
-.heart::before {
-    top: -10px;
-    left: 0;
-}
-
-.heart::after {
-    left: 10px;
-    top: 0;
-}
-
 .heart:nth-child(7) {
     left: 17%;
     animation-duration: 7s;
@@ -174,3 +176,4 @@ textarea {
     animation-duration: 4s;
     animation-delay: 2s;
 }
+
