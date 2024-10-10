@@ -14,7 +14,7 @@ body {
     text-align: center;
     padding: 20px;
 	
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	overflow-y: auto;
 }
 
@@ -97,19 +97,17 @@ textarea {
     }
 }
 .heart {
-    width: 20px;
-    height: 20px;
+    width: 20px; /* Ancho del corazón */
+    height: 20px; /* Altura del corazón */
     position: absolute;
-    background-color: #ff69b4;
-    transform: rotate(45deg); /* Rotación inicial */
-    animation: float 5s infinite ease-in-out;
-    overflow: hidden;
+    background-color: #ff69b4; /* Color del corazón */
+    transform: rotate(45deg); /* Rotación para dar forma de corazón */
+    animation: float 5s infinite ease-in-out; /* Animación de flotación */
 }
 
-/* Estilos para el antes y el después del corazón */
 .heart::before,
 .heart::after {
-    content: "";
+    content: ""; /* Crea el contenido vacío para el pseudoelemento */
     width: 20px; /* Mismo tamaño que el corazón */
     height: 20px; /* Mismo tamaño que el corazón */
     border-radius: 50%; /* Redondeo para las formas circulares */
@@ -127,6 +125,7 @@ textarea {
     left: 10px; /* Ajuste para que se superponga a la derecha */
     top: 0; /* Centrado en la parte lateral */
 }
+
 
 /* Animaciones y posicionamiento para cada corazón */
 .heart:nth-child(1) {
@@ -176,4 +175,3 @@ textarea {
     animation-duration: 4s;
     animation-delay: 2s;
 }
-
