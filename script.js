@@ -21,7 +21,7 @@ const texts = [
 
 // Generar nombres de archivos de fotos con la nueva ruta
 for (let i = 1; i <= 13; i++) {
-    photos.push(`img/foto${i}.jpg`); // Ahora las imágenes están en la carpeta img
+    photos.push(`foto${i}.jpg`); // Ahora las imágenes están en la carpeta img
 }
 
 // Crear el HTML para el slider
